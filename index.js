@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded" , initilaizeSlider);
 function initilaizeSlider(){
     if(slides.length > 0){
         slides[slideIndex].classList.add("displaySlide");
-        intrevalId = setInterval(nextSlide , 3000);
+        intrevalId = setInterval(nextSlide , 5000);
     }
 }
 
@@ -98,3 +98,20 @@ function show(){
         display = 0;
     }
 }
+
+const views = document.querySelectorAll("#view");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        observer.unobserve(entry);
+        }
+    });
+
+} 
+);
+
+views.forEach(card =>{
+    observer.observe(card);
+});
