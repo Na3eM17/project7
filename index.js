@@ -86,3 +86,15 @@ function b2(){
     two.style.display="flex";
     one.style.display="none";
 }
+
+let menue = document.getElementById("mm");
+let display=0;
+function show(){
+    if(display == 0){
+        menue.style.display = "flex";
+        display = 1;
+    }else{
+        menue.style.display = "none";
+        display = 0;
+    }
+}

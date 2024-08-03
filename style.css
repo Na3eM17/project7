@@ -64,6 +64,20 @@ button{
   border: none;
 }
 
+#mm{
+  background-color: rgba(255, 255, 255, 0.623); 
+  width: 200px; height: 500px; 
+  position: absolute;
+   top:9%;
+   right: 0;
+   z-index: 3;
+   margin-top: 0;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  }
+
 button:hover{
   background:none;
   color: black;
@@ -74,5 +88,15 @@ button:hover{
     font-size: 15px;
     font-weight: 100;
     padding: 5px;
+  }
+
+#mm{
+margin-top: -32px;}
+
+}
+
+@media screen and (max-width:1101px){
+  #mm{
+    top: 15%;
   }
 }
