@@ -115,3 +115,20 @@ const observer = new IntersectionObserver(entries => {
 views.forEach(card =>{
     observer.observe(card);
 });
+
+const views2 = document.querySelectorAll("#view2");
+
+const observer2 = new IntersectionObserver(entries => {
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        observer2.unobserve(entry);
+        }
+    });
+
+} 
+);
+
+views2.forEach(card =>{
+    observer2.observe(card);
+});
