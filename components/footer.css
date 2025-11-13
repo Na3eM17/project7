@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    margin-left: 30px;
 }
 
 .downfooter2{
@@ -88,7 +89,9 @@
     font-weight: 300;
     text-align: center;
 }
-
+.a-footer:hover{
+    text-decoration: underline;
+}
 .a{
     width: 80%;
     display: flex;
@@ -96,7 +99,9 @@
     justify-content: space-around;
     margin: 10px 0;
 }
-
+.a a:hover{
+    border-bottom: 1px solid white;
+}
 @media screen and (max-width:1024px){
     .footer2{
     font-size: 40px;
@@ -153,6 +158,9 @@
 
     .a{
         border-top: 1px solid white;
+    }
+    .downfooter{
+        margin-left: 0;
     }
 }
 

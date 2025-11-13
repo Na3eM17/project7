@@ -9,6 +9,14 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
+ul li a{
+  color: white;
+    font-size: 15px;
+
+}
+ul li a:hover{
+  text-decoration: underline;
+}
 ul {
   display: flex;
   justify-content: space-around;
@@ -66,7 +74,7 @@ button{
 
 #mm{
   background-color: rgba(255, 255, 255, 0.623); 
-  width: 200px;
+  width: 100%;
   position: absolute;
    top:9%;
    right: 0;
@@ -76,10 +84,13 @@ button{
    justify-content: flex-start;
    flex-direction: column;
    padding: 10px 5px;
+   animation: slideInDown 0.5s ease-in-out;
   }
-
-button:hover{
-  background:none;
+#mm button{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.496);
+}
+#mm button:hover{
   color: black;
 }
 
@@ -114,9 +125,21 @@ button:hover{
   }
 
 }
-
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media screen and (max-width:1101px){
   #mm{
     top: 15%;
+  }
+  #mm button{
+    font-size: 17px;
   }
 }
